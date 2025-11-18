@@ -1,0 +1,58 @@
+@echo off
+echo ===============================================
+echo  BIKECHARGE - API REST (Spark + JDBC)
+echo  Script de compilacao e execucao
+echo ===============================================
+
+REM Cria pasta lib caso nao exista
+if not exist lib (
+    echo Criando pasta lib...
+    mkdir lib
+)
+
+echo.
+echo ===============================================
+echo BAIXANDO BIBLIOTECAS NECESSARIAS...
+echo ===============================================
+
+REM Spark Java
+curl -L -o lib/spark-core-2.9.4.jar ^
+"https://repo1.maven.org/maven2/com/sparkjava/spark-core/2.9.4/spark-core-2.9.4.jar"
+
+REM Gson
+curl -L -o lib/gson-2.10.1.jar ^
+"https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar"
+
+REM MySQL Connector/J
+curl -L -o lib/mysql-connector-java-8.1.0.jar ^
+"https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.1.0/mysql-connector-j-8.1.0.jar"
+
+REM SLF4J (necessario para logs do Spark)
+curl -L -o lib/slf4j-simple-1.7.36.jar ^
+"https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar"
+
+echo.
+echo ===============================================
+echo COMPILANDO CODIGO-FONTE...
+echo ===============================================
+
+REM Cria pasta out se nao existir
+if not exist out (
+    mkdir out
+)
+
+REM Compila os arquivos .java
+javac -d out -cp "lib/*" src\main\java\br\com\bikecharge\model\*.java src\main\java\br\com\bikecharge\dao\*.java src\main\java\br\com\bikecharge\controller\*.java
+
+IF %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo ERRO NA COMPILACAO!
+    echo Verifique os erros acima.
+    pause
+    exit /b
+)
+
+echo.
+echo ===============================================
+echo EXECUTANDO API...
+echo ========
