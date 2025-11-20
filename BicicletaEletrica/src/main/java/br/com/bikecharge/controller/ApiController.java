@@ -2,6 +2,8 @@ package br.com.bikecharge.controller;
 
 import br.com.bikecharge.dao.*;
 import br.com.bikecharge.model.*;
+import br.com.bikecharge.util.GsonUtils;
+
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -15,6 +17,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+
 public class ApiController {
 
     public static void main(String[] args) {
@@ -25,7 +28,8 @@ public class ApiController {
         BicicletaDAO bicicletaDAO = new BicicletaDAOImpl();
         AluguelDAO aluguelDAO = new AluguelDAOImpl();
 
-        Gson gson = new Gson();
+        Gson gson = GsonUtils.buildGson();
+
 
         // Health
         get("/health", (req, res) -> {

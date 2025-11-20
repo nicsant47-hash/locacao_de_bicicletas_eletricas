@@ -1,0 +1,13 @@
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\controller\ApiController.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\AluguelDAO.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\AluguelDAOImpl.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\BicicletaDAO.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\BicicletaDAOImpl.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\ClienteDAO.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\ClienteDAOImpl.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\dao\ConnectionFactory.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\model\Aluguel.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\model\Bicicleta.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\model\Cliente.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\service\AluguelService.java
+C:\Users\gugae\locacao_de_bicicletas_eletricas\BicicletaEletrica\src\main\java\br\com\bikecharge\util\GsonUtils.java
